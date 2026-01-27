@@ -27,12 +27,21 @@ calculators = {
     #    enable_cueq=False,
     #),
     "MACE-MP-0": mace_mp(
-        mode="medium-0b3",
+        model="medium-0b3",
         default_dtype="float32",
         device="cuda",
         compile_mode="default",
         fullgraph=False,
         enable_cueq=True,
     )
+    # "MACE-OMAT-0": mace_mp(
+    #     model="medium-omat-0",
+    #     default_dtype="float32",
+    #     device="cuda",
+    #     compile_mode="default",
+    #     fullgraph=False,
+    #     enable_cueq=True,
+    # )
+
 }
 benchmark(calculators, atom_name="Si", lattice_constant=5.43)
